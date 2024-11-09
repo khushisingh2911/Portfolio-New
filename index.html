@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@splinetool/react-spline/next"></script> <!-- Include Spline -->
+</head>
+<body>
+    <header class="header">
+        <div class="home-icon">
+            <a href="#home" title="Home">
+                <img src="/models/green-house.png" alt="Home Icon" class="icon">
+            </a>
+        </div>
+        <div class="right-icons">
+            <a href="https://www.linkedin.com/in/khushi-singh-62206222a/" target="_blank" title="LinkedIn">
+                <img src="models/linkedin.png" alt="LinkedIn Icon" class="icons">
+            </a>
+            <a href="/models/Khushi Singh Resume copy.docx" target="_blank" title="Resume">
+                <img src="models/icons8-resume-100.png" alt="Resume Icon" class="icons">
+            </a>
+            <a href="https://github.com/khushisingh2911" target="_blank" title="GitHub">
+                <img src="models/github.png" alt="GitHub Icon" class="icons">
+            </a>
+            <div class="dropdown">
+                <button class="dropbtn">Menu</button>
+                <div class="dropdown-content">
+                    <a href="#about-me">About Me</a>
+                    <a href="#my-experience">My Experience</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <div class="hero-section">
+        <div class="text-content">
+            <h1>Hello! I'm Khushi Singh,</h1>
+            <p>I'm passionate about building and designing websites.👩🏻‍💻</p>
+        </div>
+        <div class="spline-container" style="width: 100%; height: 100vh;"></div>
+    </div>
+    
+    <h1>MY PROJECTS</h1>
+    <div class="carousel-container">
+        <button class="carousel-arrow left-arrow">‹</button>
+        <div class="carousel">
+            <div class="carousel-track">
+                <div class="carousel-card card1">
+                    <div class="card-details">
+                        <h2>WEATHER-APP</h2>
+                        <p>Tells you accurate weather based on your location.</p>
+                    </div>
+                </div>
+                <div class="carousel-card card2">
+                    <div class="card-details">
+                        <h2>GO DESI</h2>
+                        <p>All-time favorite songs from Punjabi artists.</p>
+                    </div>
+                </div>
+                <div class="carousel-card card3">
+                    <div class="card-details">
+                        <h2>SOLAR SYSTEM</h2>
+                        <p>A 3D Solar System that rotates, made using three.js.</p>
+                    </div>
+                </div>
+                <div class="carousel-card card4">
+                    <div class="card-details">
+                        <h2>LEGO SETS</h2>
+                        <p>A complete website where you can search for various LEGO sets and also get updates when you sign up.</p>
+                    </div>
+                </div>
+                <div class="carousel-card card5">
+                    <div class="card-details">
+                        <h2>BILLY BOOKS</h2>
+                        <p>Lets you read the books of your choice based on the genre.</p>
+                    </div>
+                </div>
+                <div class="carousel-card card6">
+                    <div class="card-details">
+                        <h2>Card 6 Details</h2>
+                        <p>Some details about Card 6.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-arrow right-arrow">›</button>
+    </div>
+    
+   <!-- Experience Section -->
+<section class="experience-section">
+    <h1>Experience</h1>
+    <div class="skills-icons">
+        <!-- Icons for skills here -->
+        <img src="models/icons8-programming-language-48.png" alt="Language 1" class="icon">
+        <img src="models/icons8-nodejs-48.png" alt="Language 2" class="icon">
+        <img src="models/icons8-c++-48.png" alt="Language 3" class="icon">
+        <img src="models/python.png" alt="Language 4" class="icon">
+        <img src="models/mysql.png" alt="Language 5" class="icon">
+        <img src="models/icons8-css3-48.png" alt="Language 6" class="icon">
+        <img src="models/icons8-javascript-48.png" alt="Language 7" class="icon">
+        <img src="models/icons8-postgres-48.png" alt="Language 8" class="icon">
+        <img src="models/icons8-html-48.png" alt="Language 9" class="icon">
+        <img src="models/icons8-express-js-40.png" alt="Language 10" class="icon">
+        <img src="models/icons8-microsoft-publisher-48.png" alt="Language 11" class="icon">
+        <img src="models/icons8-react-40.png" alt="Language 12" class="icon">
+        <img src="models/icons8-microsoft-365-48.png" alt="Language 13" class="icon">
+        <img src="models/web.png" alt="Language 14" class="icon">
+        <img src="models/Three.js.png" alt="Language 15" class="icon">
+        <img src="models/c-sharp.png" alt="Language 16" class="icon">
+        <img src="models/bootstrap.png" alt="Language 17" class="icon">
+    
+        <!-- Add more icons as needed -->
+    </div>
+</section>
+
+<div class="full-width-cards">
+    <!-- First Card -->
+    <div class="card">
+        <div class="card-image">
+            <img src="/models/WhatsApp Image 2024-11-08 at 22.26.55_53074a8f.jpg" alt="Toyota Supra">
+        </div>
+        <div class="card-content">
+            <h2 class="card-title">ABOUT ME</h2>
+            <p class="card-description">I am an international student studying Computer Programming in Seneca College.</p>
+        </div>
+    </div>
+</div>
+
+    
+    <script src="book.js"></script> <!-- Link to your JavaScript file -->
+    <script type="module" src="spline.jsx"></script>   
+</body>
+</html>

@@ -1,0 +1,594 @@
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+   
+   
+    flex-direction: column;
+    
+    background-color: #A5CAC3;
+}
+
+/* Header Styling */
+.header {
+    display:inline;
+    justify-content: space-between;
+    
+
+    
+}
+.right-icons {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    position: absolute;
+    right: 0;
+    padding-top: 2%;
+}
+
+
+
+/* Icon Styles */
+.icons {
+    width: 40px;
+    height: 40px;
+    
+}
+
+/* Dropdown Menu Styling */
+.dropdown {
+    position: relative;
+}
+
+.dropbtn {
+    background-color: #45A29E;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 25px;
+    position: relative;
+    z-index: 100; /* Ensure dropdown is above other elements */
+}
+
+/* Dropdown Content Styling */
+.dropdown-content {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 100%; /* Positions dropdown below the button */
+    right: 0; /* Aligns dropdown content to the right */
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    z-index: 10000; /* Ensure it's above other elements */
+}
+
+/* Show dropdown content on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color:  #45A29E;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Apply gradient effect to all headings */
+h1, h2, h3, h4, h5, h6 {
+   
+    background: linear-gradient(to right, #ffd700, #228b22, #00008b);
+    -webkit-background-clip: text;
+    color: transparent;
+    text-align: center; 
+    
+}
+
+/* Additional optional styling for headings and paragraphs */
+h1 {
+    font-size: 60px;
+    margin: 20px 0;
+}
+
+h2, h3, h4, h5, h6 {
+    margin: 15px 0;
+    font-size: 30px;
+    
+}
+
+p {
+    color: #00008b;
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.hero-section {
+    height: 100vh; /* Full height of the viewport */
+    display: flex; /* Enable flexbox */
+    justify-content: flex-start; /* Align items to the start (left) */
+    
+    background-color:  #A5CAC3; /* Background color */
+    padding-top: 20%;
+}
+
+/* Text Content Styling */
+.text-content {
+   
+   
+    color: #45A29E; /* Text color */
+    font-size: 28px; /* Font size for text */
+    
+    max-width: 400px; /* Limit width of text content */
+    text-align: left; /* Ensure text is left-aligned */
+    padding: 20px; /* Optional padding for spacing */
+}
+
+.home-icon {
+    position: absolute; 
+    top: 20px; 
+    left: 20px; 
+    z-index: 1000; 
+}
+
+.home-icon .icon {
+    width: 48px; 
+    height: 48px; 
+}
+.spline-container {
+    flex: 2; /* Allow this section to take up available space */
+    height: 350px; /* Adjust height as needed */
+    margin-left: 10px; /* Space between text and Spline */
+    margin-top: -20px; /* Move the Spline container up, adjust as needed */
+}
+
+/* Outer container holding the arrows and the carousel */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+/* Arrow button styling */
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #45A29E;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.left-arrow {
+    left: 10px; /* Adjust this value to increase spacing from the cards */
+    margin-left: -50px; /* Adds extra space between the arrow and the card */
+}
+
+.right-arrow {
+    right: 10px; /* Adjust this value to increase spacing from the cards */
+    margin-right: -30px; /* Adds extra space between the arrow and the card */
+}
+
+/* Main carousel container */
+.carousel {
+    margin-top: 50px;
+    overflow-x: auto; /* Allows scrolling without hiding content */
+    scroll-snap-type: x mandatory; /* Enables smooth snapping */
+    display: flex;
+    flex: 1;
+    gap: 10px;
+    padding: 20px 50px; /* Space for arrow buttons */
+    scrollbar-width: none; /* Hides scrollbar in Firefox */
+}
+
+.carousel::-webkit-scrollbar {
+    display: none; /* Hides scrollbar in Chrome, Safari */
+}
+
+/* Track holding the individual cards */
+.carousel-track {
+    display: flex;
+    gap: 50px;
+}
+
+/* Card styling with frosted glass effect */
+.carousel-card {
+    position: relative;
+    height: 400px;
+    width: 350px;
+    border-radius: 15%;
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+    backdrop-filter: blur(10px); /* Blurs background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    scroll-snap-align: start; /* Snap effect for carousel */
+    transition: transform 0.3s ease; /* Smooth transition */
+    overflow: hidden; /* Ensures image doesn't spill out */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Show image on hover */
+.carousel-card:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Background images for each card */
+.carousel-card.card1 {
+    background-image: url('/models/Screenshot 2024-10-15 181726.png');
+    background-size: cover; /* Cover the entire card */
+    background-position: center; /* Center the image */
+}
+
+.carousel-card.card2 {
+    background-image: url('/models/Screenshot 2024-10-16 153739.png');
+    background-size: cover; /* Cover the entire card */
+    background-position: center; /* Center the image */
+}
+
+.carousel-card.card3 {
+    background-image: url('/models/Screenshot 2024-10-16 184119.png');
+    background-size: cover; /* Cover the entire card */
+    background-position: center; /* Center the image */
+}
+
+.carousel-card.card4 {
+    background-image: url('/models/Screenshot 2024-10-16 200822.png');
+    background-size: cover; /* Cover the entire card */
+    background-position: center; /* Center the image */
+}
+
+.carousel-card.card5 {
+    background-image: url('/models/Screenshot 2024-10-26 125813.png'); /* Add a valid image URL */
+    background-size: cover; /* Cover the entire card */
+    background-position: center; /* Center the image */
+}
+
+.carousel-card.card6 {
+    background-image: url('/models/'); /* Add a valid image URL */
+    background-size: cover; /* Cover the entire card */
+    background-position: center; /* Center the image */
+}
+
+/* Glow effect for text */
+.carousel-card > div {
+    color: white;
+    text-shadow: 0px 0px 5px #45A29E, 0px 0px 10px #45A29E;
+}
+
+/* Text inside the card */
+.carousel-card > div {
+    position: absolute; /* Position text absolutely */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Move to center */
+    z-index: 1; /* Ensure text is above the background */
+    color: #45A29E;
+    font-family: 'Aworn', sans-serif;
+    font-size: 24px;
+    text-align: center;
+    opacity: 0; /* Start hidden */
+    transition: opacity 0.3s ease; /* Smooth transition for opacity */
+}
+
+/* Show text on hover */
+.carousel-card:hover > div {
+    opacity: 1; /* Show text on hover */
+}
+
+/* Change the card's backdrop filter on hover */
+.carousel-card:hover {
+    backdrop-filter: blur(15px); /* Increase blur for frosted glass effect */
+    background: rgba(255, 255, 255, 0.3); /* Increase opacity for frosted effect */
+}
+
+
+
+
+
+/* For larger screens */
+@media (min-width: 768px) {
+    .projects-section {
+        margin-bottom: 70px; /* Increase gap on larger screens */
+    }
+
+    .experience-section {
+        margin-top: 70px; /* Increase gap on larger screens */
+    }
+}
+
+/* For smaller screens */
+@media (max-width: 767px) {
+    .projects-section {
+        margin-bottom: 30px; /* Smaller gap on mobile */
+    }
+
+    .experience-section {
+        margin-top: 30px; /* Smaller gap on mobile */
+    }
+}
+
+/* Adjusted Experience Section */
+.experience-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 100vh; /* Ensure it adjusts to content dynamically */
+    margin-top: 25%; /* Remove any vertical margin */
+    padding: 20px; /* Add a smaller padding for better spacing */
+}
+
+.experience-heading {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    z-index: 1; /* Ensure the heading stays above icons */
+}
+
+.skills-icons {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    height: 500px; /* Adjust height as needed */
+    overflow: visible;
+}
+
+.icon {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    opacity: 0;
+    animation: scatter-stay 1s forwards ease-in-out, move-unique 6s infinite ease-in-out;
+}
+
+/* Scatter Animation */
+@keyframes scatter-stay {
+    0% {
+        opacity: 0;
+        transform: translate(0, 0);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(var(--x), var(--y));
+    }
+}
+
+/* Unique Back-and-Forth Animations for Each Icon */
+@keyframes move-unique-1 {
+    0% {
+        transform: translate(var(--x), var(--y));
+    }
+    50% {
+        transform: translate(calc(var(--x) + 50px), calc(var(--y) + 30px));
+    }
+    100% {
+        transform: translate(var(--x), var(--y));
+    }
+}
+
+@keyframes move-unique-2 {
+    0% {
+        transform: translate(var(--x), var(--y));
+    }
+    50% {
+        transform: translate(calc(var(--x) - 40px), calc(var(--y) + 50px));
+    }
+    100% {
+        transform: translate(var(--x), var(--y));
+    }
+}
+
+@keyframes move-unique-3 {
+    0% {
+        transform: translate(var(--x), var(--y));
+    }
+    50% {
+        transform: translate(calc(var(--x) + 60px), calc(var(--y) - 30px));
+    }
+    100% {
+        transform: translate(var(--x), var(--y));
+    }
+}
+
+@keyframes move-unique-4 {
+    0% {
+        transform: translate(var(--x), var(--y));
+    }
+    50% {
+        transform: translate(calc(var(--x) - 30px), calc(var(--y) - 50px));
+    }
+    100% {
+        transform: translate(var(--x), var(--y));
+    }
+}
+
+@keyframes move-unique-5 {
+    0% {
+        transform: translate(var(--x), var(--y));
+    }
+    50% {
+        transform: translate(calc(var(--x) + 70px), calc(var(--y) + 70px));
+    }
+    100% {
+        transform: translate(var(--x), var(--y));
+    }
+}
+
+@keyframes move-unique-6 {
+    0% {
+        transform: translate(var(--x), var(--y));
+    }
+    50% {
+        transform: translate(calc(var(--x) - 60px), calc(var(--y) - 40px));
+    }
+    100% {
+        transform: translate(var(--x), var(--y));
+    }
+}
+
+/* Add more unique movements as needed */
+@keyframes move-unique-7 {
+    0% {
+        transform: translate(var(--x), var(--y));
+    }
+    50% {
+        transform: translate(calc(var(--x) + 80px), calc(var(--y) - 20px));
+    }
+    100% {
+        transform: translate(var(--x), var(--y));
+    }
+}
+
+@keyframes move-unique-8 {
+    0% {
+        transform: translate(var(--x), var(--y));
+    }
+    50% {
+        transform: translate(calc(var(--x) - 50px), calc(var(--y) + 60px));
+    }
+    100% {
+        transform: translate(var(--x), var(--y));
+    }
+}
+
+/* Define Unique Positions for Each Icon */
+.skills-icons .icon:nth-child(1) { 
+    --x: -300px; 
+    --y: -200px;
+    animation: move-unique-1 6s infinite ease-in-out;
+}
+.skills-icons .icon:nth-child(2) { 
+    --x: 250px; 
+    --y: -150px;
+    animation: move-unique-2 7s infinite ease-in-out;
+}
+.skills-icons .icon:nth-child(3) { 
+    --x: -150px; 
+    --y: 200px;
+    animation: move-unique-3 5s infinite ease-in-out;
+}
+.skills-icons .icon:nth-child(4) { 
+    --x: 200px; 
+    --y: -80px;
+    animation: move-unique-4 6s infinite ease-in-out;
+}
+.skills-icons .icon:nth-child(5) { 
+    --x: -350px; 
+    --y: 150px;
+    animation: move-unique-5 6.5s infinite ease-in-out;
+}
+.skills-icons .icon:nth-child(6) { 
+    --x: 150px; 
+    --y: 250px;
+    animation: move-unique-6 5.5s infinite ease-in-out;
+}
+.skills-icons .icon:nth-child(7) { 
+    --x: -200px; 
+    --y: -300px;
+    animation: move-unique-7 7s infinite ease-in-out;
+}
+.skills-icons .icon:nth-child(8) { 
+    --x: 80px; 
+    --y: 200px;
+    animation: move-unique-8 5s infinite ease-in-out;
+}
+.skills-icons .icon:nth-child(9) { 
+    --x: -150px; 
+    --y: 150px;
+    animation: move-unique-1 6.5s infinite ease-in-out;
+}
+.skills-icons .icon:nth-child(10) { 
+    --x: 350px; 
+    --y: -200px;
+    animation: move-unique-2 5s infinite ease-in-out;
+}
+.skills-icons .icon:nth-child(11) { 
+    --x: -250px; 
+    --y: -80px;
+    animation: move-unique-3 6s infinite ease-in-out;
+}
+.skills-icons .icon:nth-child(12) { 
+    --x: 400px; 
+    --y: -200px;
+    animation: move-unique-4 7s infinite ease-in-out;
+}
+.skills-icons .icon:nth-child(13) { 
+    --x: -80px; 
+    --y: -300px;
+    animation: move-unique-5 6s infinite ease-in-out;
+}
+.skills-icons .icon:nth-child(14) { 
+    --x: 200px; 
+    --y: -150px;
+    animation: move-unique-6 5s infinite ease-in-out;
+}
+.skills-icons .icon:nth-child(15) { 
+    --x: -150px; 
+    --y: -200px;
+    animation: move-unique-7 7s infinite ease-in-out;
+}
+.skills-icons .icon:nth-child(16) { 
+    --x: 300px; 
+    --y: -300px;
+    animation: move-unique-8 6s infinite ease-in-out;
+}
+.skills-icons .icon:nth-child(17) { 
+    --x: -400px; 
+    --y: -80px;
+    animation: move-unique-1 5.5s infinite ease-in-out;
+}
+.full-width-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Adjust height as needed */
+    background-color:  #A5CAC3; /* Background color similar to the card image */
+}
+
+.card {
+    background: #45A29E; /* Card background color */
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    max-width: 400px;
+    text-align: center;
+    color:  #A5CAC3;
+    height: 600px;
+}
+
+.card-image img {
+    margin-top: 10%;
+    width: 50%;
+    height: 100%;
+    
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card-description {
+    font-size: 30px;
+    color: #473e3e;
+    line-height: 1.5;
+}
