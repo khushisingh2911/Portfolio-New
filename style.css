@@ -228,37 +228,37 @@ p {
 
 /* Background images for each card */
 .carousel-card.card1 {
-    background-image: url('/models/Screenshot 2024-10-15 181726.png');
+    background-image: url('models/Screenshot 2024-10-15 181726.png');
     background-size: cover; /* Cover the entire card */
     background-position: center; /* Center the image */
 }
 
 .carousel-card.card2 {
-    background-image: url('/models/Screenshot 2024-10-16 153739.png');
+    background-image: url('models/Screenshot 2024-10-16 153739.png');
     background-size: cover; /* Cover the entire card */
     background-position: center; /* Center the image */
 }
 
 .carousel-card.card3 {
-    background-image: url('/models/Screenshot 2024-10-16 184119.png');
+    background-image: url('models/Screenshot 2024-10-16 184119.png');
     background-size: cover; /* Cover the entire card */
     background-position: center; /* Center the image */
 }
 
 .carousel-card.card4 {
-    background-image: url('/models/Screenshot 2024-10-16 200822.png');
+    background-image: url('models/Screenshot 2024-10-16 200822.png');
     background-size: cover; /* Cover the entire card */
     background-position: center; /* Center the image */
 }
 
 .carousel-card.card5 {
-    background-image: url('/models/Screenshot 2024-10-26 125813.png'); /* Add a valid image URL */
+    background-image: url('models/Screenshot 2024-10-26 125813.png'); /* Add a valid image URL */
     background-size: cover; /* Cover the entire card */
     background-position: center; /* Center the image */
 }
 
 .carousel-card.card6 {
-    background-image: url('/models/'); /* Add a valid image URL */
+    background-image: url('models/'); /* Add a valid image URL */
     background-size: cover; /* Cover the entire card */
     background-position: center; /* Center the image */
 }
