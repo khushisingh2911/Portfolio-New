@@ -2,6 +2,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Spline from '@splinetool/react-spline'; // Use default import
+import './style.css'; // Your styles
 
 // Define the Spline component
 const SplineComponent = (props) => {
