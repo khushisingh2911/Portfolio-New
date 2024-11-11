@@ -7,17 +7,17 @@ import './style.css'; // Your styles
 // Define the Spline component
 const SplineComponent = (props) => {
     const { scene } = props;
-    return (
-        <div style={{ width: "120%", height: "100%" }}>
-            <Spline scene={scene} /> {/* Use the imported Spline component */}
-        </div>
+    return React.createElement(
+        'div',
+        { style: { width: "120%", height: "100%" } },
+        React.createElement(Spline, { scene: scene }) // Use the imported Spline component
     );
 };
 
 // Render the Spline scene
 const renderSpline = () => {
     ReactDOM.render(
-        <SplineComponent scene="https://prod.spline.design/AhgFcEKaeq5FjyiQ/scene.splinecode" />,
+        React.createElement(SplineComponent, { scene: "https://prod.spline.design/AhgFcEKaeq5FjyiQ/scene.splinecode" }),
         document.querySelector('.spline-container')
     );
 };
