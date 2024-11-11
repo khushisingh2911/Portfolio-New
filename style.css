@@ -6,7 +6,7 @@ body, html {
    
     flex-direction: column;
     
-    background-color: #A5CAC3;
+    background-color: #000000;
 }
 
 /* Header Styling */
@@ -41,7 +41,7 @@ body, html {
 }
 
 .dropbtn {
-    background-color: #45A29E;
+    background-color: #8A2BE2;
     color: white;
     padding: 10px;
     font-size: 16px;
@@ -84,10 +84,10 @@ body, html {
 /* Apply gradient effect to all headings */
 h1, h2, h3, h4, h5, h6 {
    
-    background: linear-gradient(to right, #ffd700, #228b22, #00008b);
+    background: linear-gradient(to right, #4B0082, #8A2BE2, #DA70D6);
     -webkit-background-clip: text;
     color: transparent;
-    text-align: center; 
+    text-align: center;
     
 }
 
@@ -104,7 +104,7 @@ h2, h3, h4, h5, h6 {
 }
 
 p {
-    color: #00008b;
+    color: #8A2BE2;
     font-size: 20px;
     margin: 10px 0;
 }
@@ -114,7 +114,7 @@ p {
     display: flex; /* Enable flexbox */
     justify-content: flex-start; /* Align items to the start (left) */
     
-    background-color:  #A5CAC3; /* Background color */
+    background-color:  #000000; /* Background color */
     padding-top: 20%;
 }
 
@@ -122,7 +122,7 @@ p {
 .text-content {
    
    
-    color: #45A29E; /* Text color */
+  
     font-size: 28px; /* Font size for text */
     
     max-width: 400px; /* Limit width of text content */
@@ -145,7 +145,7 @@ p {
     flex: 2; /* Allow this section to take up available space */
     height: 350px; /* Adjust height as needed */
     margin-left: 10px; /* Space between text and Spline */
-    margin-top: -20px; /* Move the Spline container up, adjust as needed */
+    margin-top: -200px; /* Move the Spline container up, adjust as needed */
 }
 
 /* Outer container holding the arrows and the carousel */
@@ -163,7 +163,7 @@ p {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: #45A29E;
+    background-color: #8A2BE2;
     color: white;
     border: none;
     padding: 10px;
@@ -276,7 +276,7 @@ p {
     left: 50%; /* Center horizontally */
     transform: translate(-50%, -50%); /* Move to center */
     z-index: 1; /* Ensure text is above the background */
-    color: #45A29E;
+    color: #8A2BE2;
     font-family: 'Aworn', sans-serif;
     font-size: 24px;
     text-align: center;
@@ -556,19 +556,32 @@ p {
     justify-content: center;
     align-items: center;
     height: 100vh; /* Adjust height as needed */
-    background-color:  #A5CAC3; /* Background color similar to the card image */
+    background-color:  #000000; /* Background color similar to the card image */
 }
-
 .card {
-    background: #45A29E; /* Card background color */
+    background: #000000; /* Card background color */
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    box-shadow: 
+        0 10px 30px rgba(0, 0, 0, 0.3), /* Subtle base shadow */
+        0 0 20px #4B0082, /* Gradient color 1 glow */
+        0 0 30px #8A2BE2, /* Gradient color 2 glow */
+        0 0 40px #DA70D6; /* Gradient color 3 glow */
     overflow: hidden;
     max-width: 400px;
     text-align: center;
-    color:  #A5CAC3;
+    color: #A5CAC3;
     height: 600px;
+    transition: box-shadow 0.3s ease-in-out;
 }
+
+.card:hover {
+    box-shadow: 
+        0 10px 30px rgba(0, 0, 0, 0.3), /* Base shadow */
+        0 0 30px #4B0082, /* Stronger gradient color 1 glow */
+        0 0 40px #8A2BE2, /* Stronger gradient color 2 glow */
+        0 0 50px #DA70D6; /* Stronger gradient color 3 glow */
+}
+
 
 .card-image img {
     margin-top: 10%;

@@ -17,7 +17,7 @@ const SplineComponent = (props) => {
 // Render the Spline scene
 const renderSpline = () => {
     ReactDOM.render(
-        <SplineComponent scene="https://prod.spline.design/QG6scwysfAKNR5zC/scene.splinecode" />,
+        <SplineComponent scene="https://prod.spline.design/AhgFcEKaeq5FjyiQ/scene.splinecode" />,
         document.querySelector('.spline-container')
     );
 };
