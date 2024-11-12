@@ -1,22 +1,18 @@
-// Import necessary libraries
-import React from 'react';
-import ReactDOM from 'react-dom';
-import Spline from '@splinetool/react-spline'; // Spline component
-import './style.css'; // Your styles
+// spline.js
 
-// Define the SplineComponent
-const SplineComponent = ({ scene }) => {
-  return (
-    <div style={{ width: '100%', height: '100%' }}>
-      <Spline scene={scene} />
-    </div>
-  );
-};
+// Function to load the Spline model
+function loadSplineModel() {
+    const container = document.querySelector('.spline-container');
+    const iframe = document.createElement('iframe');
 
-// Render the Spline scene when the DOM is ready
-document.addEventListener('DOMContentLoaded', () => {
-  ReactDOM.render(
-    <SplineComponent scene="https://prod.spline.design/AhgFcEKaeq5FjyiQ/scene.splinecode" />,
-    document.querySelector('.spline-container')
-  );
-});
+    iframe.src = "https://my.spline.design/robotfollowcursorforlandingpage-afeb36aaace9186a8603300e5f70e7d3/";
+    iframe.style.width = "100%";
+    iframe.style.height = "100%";
+    iframe.style.border = "none";
+    iframe.allow = "fullscreen";
+
+    container.appendChild(iframe);
+}
+
+// Call the function when the DOM is ready
+document.addEventListener('DOMContentLoaded', loadSplineModel);
