@@ -1,6 +1,6 @@
-// spline.js
 
-// Function to load the Spline model
+
+
 function loadSplineModel() {
     const container = document.querySelector('.spline-container');
     const iframe = document.createElement('iframe');
@@ -14,5 +14,5 @@ function loadSplineModel() {
     container.appendChild(iframe);
 }
 
-// Call the function when the DOM is ready
+
 document.addEventListener('DOMContentLoaded', loadSplineModel);

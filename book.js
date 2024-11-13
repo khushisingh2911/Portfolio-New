@@ -1,13 +1,12 @@
 
-// Select carousel elements
+
 const track = document.querySelector('.carousel-track');
 const leftArrow = document.querySelector('.left-arrow');
 const rightArrow = document.querySelector('.right-arrow');
 
 let currentIndex = 0;
-const cardWidth = 300 + 20; // Card width + gap (adjust if gap changes)
+const cardWidth = 300 + 20; 
 
-// Event listener for left arrow
 leftArrow.addEventListener('click', () => {
     if (currentIndex > 0) {
         currentIndex--;
@@ -15,7 +14,7 @@ leftArrow.addEventListener('click', () => {
     }
 });
 
-// Event listener for right arrow
+
 rightArrow.addEventListener('click', () => {
     if (currentIndex < track.children.length - 1) {
         currentIndex++;
@@ -34,31 +33,31 @@ const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        // Adjust these values to control the distance between icons
-        const maxDistance = 300; // Maximum scatter distance from center
-        const minDistance = 150; // Minimum scatter distance from center
+        
+        const maxDistance = 300; 
+        const minDistance = 150; 
 
         icons.forEach((icon) => {
-          // Generate random angle and distance
-          const angle = Math.random() * 9 * Math.PI; // Random angle in radians (0 to 2π)
+          
+          const angle = Math.random() * 9 * Math.PI; 
           const distance =
-            Math.random() * (maxDistance - minDistance) + minDistance; // Random distance in range
+            Math.random() * (maxDistance - minDistance) + minDistance; 
 
-          const x = distance * Math.cos(angle); // X-coordinate
-          const y = distance * Math.sin(angle); // Y-coordinate
+          const x = distance * Math.cos(angle); 
+          const y = distance * Math.sin(angle); 
 
-          // Apply transform and opacity for scattering
-          icon.style.opacity = '1'; // Make visible
-          icon.style.transform = `translate(${x}px, ${y}px)`; // Scatter randomly
+          
+          icon.style.opacity = '1'; 
+          icon.style.transform = `translate(${x}px, ${y}px)`; 
         });
 
         skillsIcons.classList.add('scattered');
-        observer.disconnect(); // Stop observing once effect is applied
+        observer.disconnect(); 
       }
     });
   },
   {
-    threshold: 0.5, // Trigger when 50% of the section is visible
+    threshold: 0.5, 
   }
 );
 
